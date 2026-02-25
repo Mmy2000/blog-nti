@@ -1,0 +1,35 @@
+
+
+Backend With Python :
+    - Django  : Full Framework => insta , Udemy , nasa
+    - Flask   : Micro Framwork => oddo
+    - Web2Py  : Security
+    - FastAPI : API
+
+
+MVC => Model View Controller  , MVT => Model View Template
+
+Model => database             , Model => database
+View  => frontend             , View  => logic
+Controller => logic           , Template => frontend
+
+(design + data)
+
+
+code python => (ORM) => queries database
+
+pip install virtualenv
+
+python -m venv venv
+
+venv/Scripts/activate
+
+pip install django
+
+django-admin startproject blog .
+
+python manage.py migrate
+
+python manage.py runserver
+
+python manage.py createsuperuser

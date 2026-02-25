@@ -1,0 +1,53 @@
+<h2>Post List</h2>
+
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .post-item {
+    display: block;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+
+  .post-item:hover {
+    background: #f0f4ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    color: #1e40af;
+  }
+</style>
+
+<div class="post-list">
+  {% for post in posts %}
+    <a href="{% url 'post_details' post.id %}" class="post-item">{{ post }}</a>
+  {% empty %}
+    <p style="text-align:center; color:#777;">No posts available.</p>
+  {% endfor %}
+</div>

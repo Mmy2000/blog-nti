@@ -1,0 +1,78 @@
+
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1e40af;
+  }
+
+  .home-card {
+    max-width: 600px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 30px;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .primary-btn {
+    background: #1e40af;
+    color: #fff;
+  }
+  .primary-btn:hover {
+    background: #3749e9;
+    transform: translateY(-2px);
+  }
+
+  .secondary-btn {
+    background: #6b7280;
+    color: #fff;
+  }
+  .secondary-btn:hover {
+    background: #4b5563;
+    transform: translateY(-2px);
+  }
+</style>
+
+<div class="home-card">
+  <h2>Home Page</h2>
+  <p>Welcome to the blog site 👋. Use the buttons below to explore posts or create a new one.</p>
+  <div class="btn-group">
+    <a href="{% url 'post_list' %}" class="btn primary-btn">📖 View Posts</a>
+    <a href="{% url 'create_post' %}" class="btn secondary-btn">➕ Create Post</a>
+  </div>
+</div>
